@@ -1,5 +1,6 @@
 import './MonitorStyle.css'
 import React, {useState, useEffect} from "react";
+import data from '../../details.json';
 
 
 const MonitorItem = (props) =>{
@@ -32,8 +33,8 @@ const Monitor = (props) =>{
     
     return(
         <div>
-            {monitors.map((monitor)=>{
-                    return <MonitorItem id={monitor.MonitorTypeId} name={monitor.Name}/>
+            {monitors.map((index ,monitor)=>{
+                    return <MonitorItem key={index} id={monitor.MonitorTypeId} name={monitor.Name}/>
             })}
 
         </div>

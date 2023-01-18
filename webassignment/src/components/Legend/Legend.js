@@ -1,5 +1,6 @@
 import './LegendStyle.css'
 import React  from "react";
+import data from '../../details.json';
 
 const LegendItem = (props) =>{
     const {label, color} = props;
@@ -8,12 +9,14 @@ const LegendItem = (props) =>{
             <div style={{
                 height: 15,
                 width: 15,
-                backgroundColor: `${color}`
+                backgroundColor: `${color}`,
+                
             }}></div>
             <div>
                 {label}
             </div>
         </div>
+        
     )
 }
 
@@ -21,12 +24,12 @@ const Legend = (props) =>{
     const {tags}= props;
     return(
         <div style={{
-            height:"50vh",
-            width:"50vw",
+            height:"100vh",
+            width:"60vw",
           }}>
        
-        {tags?.map(item => {
-            return <LegendItem color={item.Color} label={item.Label}/>
+        {tags?.map((item,index) => {
+            return <LegendItem key={index} color={item.Color} label={item.Label}/>
         })}
         </div>
     )
