@@ -7,8 +7,16 @@ import MonitorType from './components/Monitortype/Monitortype'
 
 function App() {
   const [typeIdFilter, setTypeIdFilter] = useState(" ");
+  var newNum=1;
   const onFilterClick = (e) => {
     setTypeIdFilter(parseInt(e.target.value));
+    console.log(parseInt(e.target.value),"Tal");
+    if(parseInt(e.target.value)>newNum){
+      newNum =0;
+    }
+    else{
+      newNum =1;
+    }
   }
  
 
@@ -23,7 +31,7 @@ function App() {
           </div>  
             
           <div className="legendborder">  
-            <Legend tags={data.Legends[1].tags}/>
+            <Legend tags={data.Legends[newNum].tags }/>
           </div>
         </div>
     </div>
