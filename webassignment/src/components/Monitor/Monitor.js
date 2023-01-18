@@ -22,21 +22,21 @@ const Monitor = (props) =>{
 
 
     useEffect(() => {
-        monitorList.map(monitor=>{
-            if(monitor.MonitorTypeId===id){
-                setMonitors([...monitors, {monitor}]);
-            }
-        })
+
+        const temp = monitorList.filter(monitor=>monitor.MonitorTypeId===id);
+        setMonitors(temp);
+    
         
-        // setMonitors(monitorList?.find(monitor=>monitor.MonitorTypeId===id));
+        
     }, [id]);
+    
     
     return(
         <div>
-            {monitors.map((index ,monitor)=>{
-                    return <MonitorItem key={index} id={monitor.MonitorTypeId} name={monitor.Name}/>
-            })}
-
+            
+            {monitors.map((monitor)=>(
+                <p key={monitor.Id}>{monitor.Name}</p>
+            ))}
         </div>
     )
 }
