@@ -5,7 +5,7 @@ const LegendItem = (props) =>{
     const {label, color} = props;
     return(
         <div className="legend-wrapper">
-            <div className = "color" style={{
+            <div style={{
                 height: 15,
                 width: 15,
                 backgroundColor: `${color}`
@@ -15,9 +15,7 @@ const LegendItem = (props) =>{
             </div>
         </div>
     )
-    
 }
-
 
 const Legend = (props) =>{
     const {tags}= props;
@@ -30,10 +28,8 @@ const Legend = (props) =>{
         {tags?.map(item => {
             return <LegendItem color={item.Color} label={item.Label}/>
         })}
-        
-       </div>
+        </div>
     )
-   
 }
 
 export default Legend;

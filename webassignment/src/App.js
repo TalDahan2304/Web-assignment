@@ -2,9 +2,10 @@ import './App.css';
 import data from './details.json'
 import React from "react";
 import Legend from './components/Legend/Legend'
+import Monitor from './components/Monitor/Monitor'
 
 function App() {
-  // console.log(data.Legends[1]);
+ 
 
   return (
 
@@ -17,7 +18,10 @@ function App() {
           height:"100vh",
           width:"100vw",
         }}>
-        <Legend tags={data.Legends[1].tags}/>
+          <Monitor id={1} monitorList={data.Monitor}/>
+        {/* <Legend tags={data.Legends[1].tags}/> */}
+
+
         </div>
     </div>
   );
