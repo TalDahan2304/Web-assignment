@@ -1,0 +1,14 @@
+.btnContainer{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    gap:12px;
+    margin-top: 100px;
+}
+.btns{
+    color: rgb(54, 122, 54);
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    
+}

@@ -78,7 +78,7 @@
             "Id": 22,
             "Name": "PM10",
             "Desc": "",
-            "MonitorTypeId": 0
+            "MonitorTypeId": 0 
         },
         {
             "Id": 21,
